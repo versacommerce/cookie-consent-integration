@@ -30,7 +30,7 @@ This file is empty because it's not needed for this integration.
 ## Configuration options for this integration.
 | Label     | Key          | Default Value                                                                                                                      | Validates presence? |
 | --------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | :---------: |
-| Nachricht | MESSAGE_LINK | <h3>Wir achten Ihre Privatsphäre</h3> Für uns stehen unsere Kunden an erste Stelle, und damit natürlich auch der Schutz Ihrer Privatsphäre.|             |
+| Nachricht | MESSAGE_LINK | ```<h3>Wir achten Ihre Privatsphäre</h3> Für uns stehen unsere Kunden an erste Stelle, und damit natürlich auch der Schutz Ihrer Privatsphäre.```|             |
 | Info Link | INFO_LINK    | pages/datenschutz                                                                                                                          |      √      |
 
 
