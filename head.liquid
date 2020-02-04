@@ -1,0 +1,31 @@
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#edeff5",
+      "text": "#838391"
+    },
+    "button": {
+      "background": "#4b81e8"
+    }
+  },
+  "content": {
+    {% if integration['MESSAGE_CONTENT'] != '' %}
+    	"message": "{{ integration['MESSAGE_CONTENT'] }}",
+  	{% else %}
+			"message": "<h3>{{ shop.name }} achtet Ihre Privatsphäre</h3> Für uns stehen unsere Kunden an erster Stelle, und damit natürlich auch der Schutz Ihrer Privatsphäre. Beim Thema Datenschutz stellen wir darum sehr hohe Anforderungen an unsere Handelspartner, unsere Technik und uns selbst. Mit der Nutzung unserer Seite stimmen Sie unseren Datenschutzbestimmungen zu und akzeptieren die Verwendung von Cookies.",
+    {% endif %}
+    "dismiss": "Ich habe verstanden",
+    "link": "Datenschutzbestimmungen öffnen",
+    "href": "{{ integration['INFO_LINK'] }}"
+  }
+})});
+</script>
+<style>
+  div[aria-label]{
+    z-index: 10000000!important;
+  }
+</style>
